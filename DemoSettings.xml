@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HostArguments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Address>http://localhost</Address>
+  <Port>11833</Port>
+  <Extensions>
+    <Extension Path="%ROOT%\..\..\..\IDX.WebHub.APIDemo\bin\Debug\*.dll" ID="*" />
+  </Extensions>
+  <Configurations>
+    <Configuration xsi:type="StaticContent" ID="Demo Static Content" Path="D:\Path\to\my\files\" Route="demo" />
+    <Configuration xsi:type="Service" ID="mySimpleService" Extension="APIDemo_SimpleService">
+      <Parameters>
+        <Parameter>
+          <Name>answer</Name>
+          <Value>think twice!</Value>
+        </Parameter>
+      </Parameters>
+    </Configuration>
+    <Configuration xsi:type="Properties" ID="democonfig">
+      <Parameters>
+        <Parameter>
+          <Name>myKey</Name>
+          <Value>myValue</Value>
+        </Parameter>
+      </Parameters>
+    </Configuration>
+  </Configurations>
+</HostArguments>
